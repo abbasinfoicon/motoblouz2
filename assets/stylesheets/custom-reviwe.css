@@ -1,0 +1,44 @@
+/* Rating Star Widgets Style */
+.rating-stars ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 0;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.rating-stars ul > li.star {
+    display: inline-block;
+
+}
+
+/* Idle State of the stars */
+.rating-stars ul > li.star > i.fa {
+    font-size: 26px; /* Change the size of the stars */
+    color: #9e9e9e; /* Color on idle state */
+    cursor: pointer;
+    width: 40px;
+}
+
+/* Hover state of the stars */
+.rating-stars ul > li.star.hover > i.fa {
+    color: #f1ab00;
+}
+
+.rating-stars ul > li.star.hover > i.fa:before {
+    content: "\f005";
+}
+
+/* Selected state of the stars */
+.rating-stars ul > li.star.selected > i.fa {
+    color: #f1ab00;
+}
+.rating-stars ul > li.star.selected > i.fa:before {
+    content: "\f005";
+}
+
+#customForgotPassword.in {
+    display: block;
+    opacity: 1;
+}
