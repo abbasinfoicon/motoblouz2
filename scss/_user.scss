@@ -1,0 +1,181 @@
+/*=============================================================================================
+---------------------------- User --------------------------------------------
+===================================================================================================*/
+//testimonials
+.testimonials {
+  @include full-width;
+
+  .media {
+    background: #fafafa;
+    padding: 22px;
+    margin-bottom: 40px;
+
+    .media-left {
+      padding-right: 12px;
+
+      img {
+        width: 25px;
+        height: auto;
+        @include border-radius(0);
+      }
+    }
+
+    .media-body {
+      border-left: 1px solid $border;
+      padding-left: 10px;
+
+      p {
+        font-size: 13px;
+        @include arial(regular400);
+        color: $black;
+        margin-bottom: 0;
+        line-height: 1.76;
+        background: transparent;
+
+        span {
+          font-weight: bold;
+          display: block;
+        }
+      }
+    }
+  }
+
+  //owl-dots
+  .owl-dots {
+    text-align: center;
+    margin-bottom: 50px;
+
+    //owl-dot
+    .owl-dot {
+      width: 8px;
+      height: 8px;
+      margin: 0 7px;
+      display: inline-block;
+      background: #929292;
+      @include border-radius(100);
+
+      &.active {
+        background: $yellow;
+      }
+    }
+  }
+}
+
+//user-page
+.user-page {
+  .product-description {
+    padding: 0;
+
+    //flex-item
+    .flex-item {
+      align-items: flex-end;
+
+      .media{
+        @include mq(max, 619){
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    h5 {
+      font-size: 30px;
+      margin-bottom: 10px;
+
+      &.clr-yellow {
+        font-size: 18px;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+//all-testimonials
+
+.all-testimonials {
+  position: absolute;
+  bottom: 66px;
+  right: 0;
+  z-index: 99;
+
+  @include mq(max, 767){
+    bottom: 80px;
+  }
+
+  a {
+    font-size: 14px;
+    @include arial(bold700);
+    color: $black;
+    letter-spacing: 0.3px;
+
+    img {
+      display: inline-block;
+      margin-right: 6px;
+      margin-top: -4px;
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}
+
+
+//les-vendeur
+.les-vendeur {
+  @include full-width;
+  margin-bottom: 41px;
+
+  @include mq(max, 425){
+    margin-bottom: 0;
+  }
+
+  .owl-prev, .owl-next {
+    bottom: -41px;
+    top: auto;
+    cursor: pointer;
+  }
+}
+
+
+/*=============================================================================================
+---------------------------- end-User --------------------------------------------
+===================================================================================================*/
+
+
+//back-button-right
+.back-button-right{
+  position: relative;
+  margin-top: 30px;
+
+  .back-page{
+    @include montserrat(regular400);
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: right;
+    color: $blk2;
+    display: block;
+    margin-bottom: 6px;
+    position: absolute;
+    top: -30px;
+    right: 0;
+
+    img {
+      display: inline-block;
+      position: relative;
+      margin-right: 8px;
+      top: -2px;
+    }
+
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

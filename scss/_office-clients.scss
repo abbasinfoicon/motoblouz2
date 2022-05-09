@@ -1,0 +1,2751 @@
+/*=============================================================================================
+---------------------------- Middle-Office-Clients --------------------------------------------
+===================================================================================================*/
+//office-client
+.office-client {
+
+  @include mq(max, 992) {
+    margin-bottom: 30px;
+  }
+
+  @include mq(max, 425) {
+    margin-top: 80px;
+  }
+
+  .media {
+
+    @include mq(max, 425) {
+      display: flex;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+
+    //media-left
+    .media-left {
+      padding-right: 25px;
+
+      @include mq(max, 425) {
+        padding-right: 0;
+        display: block;
+      }
+
+      //imgCenter-photo
+      .imgCenter-photo {
+        width: 62px;
+        height: 62px;
+        border-radius: 100%;
+        max-width: 62px;
+        margin-bottom: 5px;
+        position: relative;
+        overflow: hidden;
+
+        @include mq(max, 425) {
+          margin: 0 auto 5px;
+        }
+      }
+
+      img {
+        @include img-center(both);
+      }
+
+      p {
+        color: rgba(0, 0, 0, .61);
+        font-size: 12px;
+        text-align: center;
+        @include arial(regular400);
+      }
+    }
+
+    //media-body
+    .media-body {
+
+      @include mq(max, 425) {
+        text-align: center;
+      }
+
+      h4 {
+        font-size: 29.74px;
+        color: $black;
+        @include montserrat(medium500);
+        letter-spacing: -1.4px;
+        margin-bottom: 12px;
+
+        @include mq(max, 767) {
+          letter-spacing: normal;
+          font-size: 24px;
+        }
+      }
+
+      h5 {
+        color: $darkred;
+        font-size: 18px;
+        @include arial(regular400);
+        margin-bottom: 10px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      ul {
+        li {
+          display: inline-block;
+          cursor: pointer;
+
+          i {
+            color: $yellow;
+          }
+
+          p {
+            margin-left: 5px;
+            @include arial(regular400);
+            color: $black;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//client-logout
+.client-logout {
+
+  @include mq(max, 992) {
+    margin-bottom: 30px;
+  }
+
+  a {
+    img {
+      margin: 0 auto 15px;
+    }
+
+    p {
+      color: $darkred;
+      font-size: 10.24px;
+      @include montserrat(medium500);
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
+
+//office-middle
+.office-middle {
+  @include mq(min, 992) {
+    position: absolute;
+    top: 28px;
+  }
+
+  ul {
+    height: 48px;
+    position: relative;
+    font-size: 0;
+
+    @include mq(max, 992) {
+      display: flex;
+      justify-content: center;
+    }
+
+    @include mq(max, 550) {
+      display: block;
+      height: auto;
+    }
+
+
+    li {
+      display: inline-block;
+      padding: 0 9px 10px;
+      border-left: 1px solid $border;
+      text-align: center;
+
+
+      @include mq(max, 992) {
+        width: 100%;
+      }
+
+      @include mq(max, 550) {
+        border-left: none;
+        border-bottom: 1px solid $border;
+        padding: 5px 0;
+      }
+
+      &:last-child {
+        border-right: 1px solid $border;
+
+        @include mq(max, 550) {
+          border-right: none;
+          border-bottom: none;
+        }
+
+      }
+
+      a {
+        font-size: 17px;
+        @include arial(regular400);
+        color: $lblk-button;
+        text-align: center;
+
+        span {
+          display: block;
+          color: $darkred;
+
+
+          &.notShow {
+            opacity: 0;
+
+            @include mq(max, 550) {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &.active {
+        background: $yellow;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 0;
+          height: 0;
+          border-left: 4px solid transparent;
+          border-right: 4px solid transparent;
+          border-bottom: 5px solid $white;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+
+        &:after {
+          content: '';
+          position: absolute;
+          width: calc(100% + 2px);
+          height: 15px;
+          background: $yellow;
+          top: -14px;
+          left: -1px;
+
+          @include mq(max, 550) {
+            content: none;
+          }
+        }
+
+
+        a {
+          color: $white;
+
+          span {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+//officeClent-bg
+.officeClent-bg {
+  background: $white;
+  border: 1px solid $border;
+
+  //row-flex
+  .row-flex {
+    display: flex;
+
+    @include mq(max, 992) {
+      display: block;
+    }
+  }
+
+  //table
+  table {
+    margin-bottom: 0;
+    border: none;
+  }
+
+
+  //col-custom-4
+  .col-custom-4 {
+    width: 23%;
+    background: $lblk-btn;
+
+    @include mq(min, 992) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include mq(max, 992) {
+      background: none;
+    }
+  }
+
+  //col-custom-8
+  .col-custom-8 {
+    width: 77%;
+  }
+
+  .col-custom-4, .col-custom-8 {
+    @include mq(max, 992) {
+      width: 100%;
+    }
+  }
+}
+
+
+//office-leftSec
+.office-leftSec {
+  padding: 30px 0;
+
+  @include mq(max, 992) {
+    background: $lblk-btn;
+    margin-bottom: 30px;
+  }
+
+  @include mq(max, 425) {
+    padding-bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    li {
+      border-bottom: 1px solid #666666;
+
+      //noborder
+      &.noborder {
+        border-bottom: none;
+      }
+
+      a {
+        @include arial(regular400);
+        font-size: 16px;
+        color: $white;
+        display: block;
+        text-align: right;
+        padding: 4px 25px 4px 15px;
+
+        @include mq(max, 992) {
+          text-align: center;
+        }
+
+        &:hover {
+          color: $lblk-btn;
+          background: $yellow;
+        }
+
+
+      }
+
+      &.active {
+        a {
+          color: $lblk-btn;
+          background: $yellow;
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+//office-rightSec
+.office-rightSec {
+  padding: 35px 44px;
+  @include full-width;
+
+  @include mq(max, 992) {
+    padding: 35px 15px;
+  }
+
+  @include mq(max, 992) {
+    padding: 15px;
+  }
+
+  //table
+  table {
+    thead {
+      background: #f9f8f4;
+
+      tr {
+        cursor: pointer;
+
+
+        th {
+          font-size: 14px;
+          @include arial(bold700);
+          color: $black;
+          padding: 8px 20px 20px;
+          vertical-align: top;
+          white-space: nowrap;
+
+
+          &.padding-left {
+            padding-left: 15px;
+            position: relative;
+
+            i.fa {
+              position: absolute;
+              top: 11px;
+              cursor: pointer;
+              left: -5px;
+              font-size: 16px;
+              color: #7f7a6d;
+            }
+          }
+
+          //w250
+          &.w250 {
+            width: 250px;
+
+            @include mq(max, 992) {
+              width: auto;
+            }
+          }
+
+          //w200
+          &.w200 {
+            width: 200px;
+
+            @include mq(max, 992) {
+              width: auto;
+            }
+          }
+        }
+      }
+
+
+    }
+
+    //tbody
+    tbody {
+      tr {
+        cursor: pointer;
+
+        td {
+          padding: 0;
+          font-size: 16px;
+          @include arial(regular400);
+          color: $black;
+          vertical-align: middle;
+          white-space: nowrap;
+
+          img {
+            //margin: 0 auto;
+          }
+
+          &.td-show {
+            white-space: normal;
+          }
+
+          a {
+            padding: 8px 20px;
+            color: rgba(0, 0, 0, 0.84);
+            font-size: 15px;
+            @include arial(regular400);
+            display: block;
+
+            img {
+              display: inline;
+              cursor: pointer;
+            }
+          }
+        }
+
+        &:hover, &.activated {
+          background: $yellow;
+        }
+      }
+
+      /*=============================================================================================
+---------------------------- Middle-Office-Factures --------------------------------------------
+===================================================================================================*/
+
+      //detail-facture
+      .detail-facture {
+        cursor: pointer;
+
+        td {
+          padding: 8px 16px;
+
+          a {
+            padding: 0;
+          }
+        }
+
+        &:nth-of-type(odd) {
+          background-color: transparent;
+        }
+
+        &:nth-child(4n+1) {
+          background: #f9f9f9;
+        }
+
+        &:hover, &.activated {
+          background: $yellow;
+        }
+
+        .img-black {
+          display: block;
+        }
+
+        .img-white {
+          display: none;
+        }
+
+        &.open {
+          background: $lblk-btn;
+
+          .img-black {
+            display: none;
+          }
+
+          .img-white {
+            display: block;
+          }
+
+          td {
+            color: $white;
+          }
+        }
+      }
+
+      //detail-facture-show
+      .detail-facture-show {
+        display: none;
+        transform-origin: top;
+
+        //open
+        &.open {
+          display: table-row;
+          animation: anim 0.5s ease;
+        }
+
+        //close-animation
+        &.close-animation {
+          animation: anim1 0.5s ease;
+          transform-origin: top;
+        }
+
+        &:hover {
+          background: none;
+        }
+
+        .dts-pding {
+          padding: 32px 20px;
+          position: relative;
+
+          //button-download
+          .button-download {
+            text-align: center;
+
+
+            //btn-download
+            .btn-download {
+              font-size: 16px;
+              @include arial(regular400);
+              color: $black;
+              background: $gray-down;
+              border: 1px solid $border;
+              @include border-radius(0);
+              padding: 15px 24px 13px;
+              text-align: center;
+              margin: 0 auto;
+
+              img {
+                display: inline-block;
+                position: relative;
+                left: -10px;
+                top: 7px;
+              }
+
+              &:hover {
+                background: $yellow;
+                border-color: #b98300;
+              }
+            }
+          }
+
+          table {
+            tr {
+              &:hover {
+                background: none;
+              }
+            }
+          }
+        }
+
+        h3 {
+          font-size: 16px;
+          @include arial(bold700);
+          color: $black;
+          margin-bottom: 20px;
+        }
+
+        //close-tr
+        .close-tr {
+          position: absolute;
+          //right: 20px;
+          //top: 15px;
+          right: 126.5px;
+          top: -38px;
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        p {
+          font-size: 15px;
+          @include arial(regular400);
+          color: $black;
+          margin-bottom: 30px;
+          line-height: 1.76;
+        }
+
+        table {
+          margin-bottom: 30px;
+
+          tr {
+            td {
+              padding: 8px 20px 8px 0 !important;
+              font-size: 15px;
+
+
+              &:last-child {
+                text-align: right;
+              }
+            }
+
+            &:first-child {
+              td {
+                border-top: none;
+              }
+            }
+
+            &:last-child {
+              td {
+                border-bottom: none;
+              }
+            }
+          }
+        }
+
+        //reclamation-details
+        &.reclamation-details {
+          .close-tr {
+            right: 20px;
+            top: 15px;
+          }
+        }
+      }
+
+    }
+  }
+
+  //panier2-accordion
+  &.panier2-accordion {
+    .panel-body {
+      @include mq(max, 992) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  //bg-grayBox
+  .bg-grayBox {
+    padding: 0;
+    background: none;
+    border: 0;
+  }
+}
+
+//top-table
+.top-table {
+  position: relative;
+  padding-top: 25px;
+
+  @include mq(max, 767) {
+    padding-top: 0;
+  }
+
+
+  &.mb65 {
+    margin-bottom: 65px;
+
+    @include mq(max, 992) {
+      margin-bottom: 30px;
+    }
+  }
+
+  //back-page
+  .back-page, .print-page {
+    @include montserrat(regular400);
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: right;
+    color: $blk2;
+    display: block;
+    margin-bottom: 6px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    img {
+      display: inline-block;
+      position: relative;
+      margin-right: 8px;
+      top: -2px;
+    }
+
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  //back-page
+  .back-page {
+    right: 0;
+  }
+
+  //print-page
+  .print-page {
+    right: 95px;
+    padding-right: 17px;
+    border-right: 1px solid $border;
+
+    @include mq(max, 767) {
+      padding-right: 0;
+      border-right: none;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include mq(max, 767) {
+    padding-top: 0;
+
+    .back-page, .print-page {
+      position: static;
+    }
+  }
+
+
+  h3 {
+    font-size: 21px;
+    @include montserrat(medium500);
+    letter-spacing: 0.3px;
+    color: $black;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 25px;
+    position: relative;
+
+    @include mq(max, 425){
+      margin-bottom: 5px;
+    }
+
+    &:after {
+      content: '';
+      width: 90px;
+      height: 3px;
+      background: $orange;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+
+    span {
+      font-weight: normal;
+
+    }
+  }
+
+  .achats-reclamations {
+    text-align: right;
+    font-size: 0;
+
+    li {
+      display: inline-block;
+      border-left: 1px solid $border;
+
+      h4 {
+        text-align: right;
+        color: $black;
+        font-size: 16px;
+        @include arial(regular400);
+        position: relative;
+        margin: 10px 15px 7px;
+
+
+        @include mq(max, 767) {
+          letter-spacing: normal;
+        }
+
+        span {
+          color: $darkred;
+        }
+      }
+
+      &:first-child {
+        border-left: none;
+      }
+
+      &:last-child {
+        border-left: 1px solid $border;
+
+        h4 {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+
+}
+
+
+//tab-header
+.tab-header {
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(max, 820) {
+      display: block;
+    }
+
+    li {
+      border: 1px solid $border;
+      margin-bottom: 10px;
+      padding: 6px 10px;
+      width: 100%;
+      margin-right: 5px;
+      display: flex;
+      align-items: center;
+
+      @include min-max(993, 1348) {
+        padding: 6px 6px 6px 10px;
+      }
+
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      //img-sec
+      .img-sec {
+        display: inline-block;
+        padding-right: 10px;
+        vertical-align: middle;
+
+        @include min-max(993, 1348) {
+          padding-right: 5px;
+        }
+      }
+
+      //content-sec
+      .content-sec {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      a {
+        @include arial(regular400);
+        font-size: 15px;
+        color: $black;
+
+        @include min-max(993, 1348) {
+          font-size: 13px;
+        }
+
+        br {
+          @include mq(max, 425) {
+            display: none;
+          }
+        }
+      }
+
+      //contact-button
+      #contact-button {
+        @include mq(max, 425) {
+          margin-bottom: 0;
+        }
+      }
+
+    }
+  }
+}
+
+
+//client-search
+.client-search {
+  background: #ebe8e0;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 9;
+
+  @include mq(max, 650) {
+    display: block;
+  }
+
+  @include mq(max, 425) {
+    padding: 15px 10px;
+  }
+
+  &.client-achats {
+    justify-content: flex-end;
+
+    h3 {
+      position: absolute;
+      left: 20px;
+    }
+
+    @include mq(max, 992) {
+      justify-content: space-between;
+    }
+
+    @include mq(max, 860) {
+      display: block;
+    }
+  }
+
+  @include mq(max, 550) {
+    display: block;
+  }
+
+  h3 {
+    font-size: 18px;
+    @include arial(regular400);
+    color: $black;
+    display: inline-block;
+
+    @include mq(max, 650) {
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    span {
+      color: $darkred;
+    }
+  }
+
+  //search-client
+  .search-client {
+    margin-right: 30px;
+
+    @include mq(max, 992) {
+      margin-right: 0;
+    }
+
+    @include mq(max, 860) {
+      margin-bottom: 15px;
+    }
+
+    //noMarginRight
+    &.noMarginRight {
+      margin-right: 0;
+    }
+  }
+
+  .search-client, .filter-client {
+    position: relative;
+
+
+    input {
+      width: 230px;
+      height: 38px;
+      padding: 6px 60px 6px 30px;
+      border: none;
+      font-size: 17px;
+      @include arial(regular400);
+      color: $black;
+      outline: none;
+      box-shadow: none;
+
+      @include mq(max, 860) {
+        width: 100%;
+      }
+
+      &::placeholder {
+        color: $black;
+      }
+
+      &#datefilter {
+        padding-left: 10px;
+        font-size: 14px;
+
+
+        &::placeholder {
+          font-size: 17px;
+        }
+      }
+    }
+
+    select, .jcf-select {
+      @extend input;
+      width: 184px;
+      -webkit-appearance: none;
+      background: url(../img/select-yellow2.png) $white;
+      background-repeat: no-repeat;
+      background-position: top 1px right 1px;
+      cursor: pointer;
+
+      @include mq(max, 650) {
+        width: 100%;
+      }
+
+      //w100p
+      &.w100p {
+        width: 100%;
+      }
+    }
+
+    button {
+      border: none;
+      background: none;
+      display: contents;
+    }
+
+    .fa {
+      position: absolute;
+      right: 1px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $yellow;
+      color: $white;
+      padding: 11px 18px;
+      cursor: pointer;
+
+      &.img-responsive {
+        padding: 6.5px 18px;
+      }
+    }
+
+    label {
+      display: inline;
+    }
+  }
+
+  //borderLeft
+  .borderLeft {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      height: 36px;
+      width: 1px;
+      background: $p-color;
+      left: -25px;
+      top: 1px;
+
+
+      @include mq(max, 778) {
+        content: none;
+      }
+    }
+  }
+
+  //MarginRight30
+  .MarginRight30 {
+    margin-right: 30px;
+
+    @include mq(max, 992) {
+      margin-right: 0;
+
+    }
+
+    @include mq(max, 860) {
+      margin-bottom: 15px;
+    }
+
+    select {
+      padding-left: 15px;
+    }
+  }
+
+
+  //inventaire-office
+  &.inventaire-office {
+    padding: 5px 20px;
+    background: #e8e8e8;
+    position: relative;
+    margin-bottom: 10px;
+
+    @include mq(max, 650) {
+      padding: 20px 15px;
+    }
+
+    @include mq(max, 425) {
+      padding: 15px 10px;
+    }
+
+    h3 {
+      font-size: 17px;
+      @include arial(bold700);
+      color: $black;
+
+      img {
+        display: inline-block;
+        margin-right: 15px;
+      }
+    }
+
+    //noAfter
+    &.noAfter {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  //tableau-bord
+  &.tableau-bord {
+    background: none;
+    justify-content: flex-end;
+    padding: 0;
+
+    //search-client
+    .search-client {
+      border: 1px solid $border;
+    }
+  }
+}
+
+
+//flex-tableau
+.flex-tableau {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  @include mq(max, 860) {
+    display: block;
+  }
+
+  //col7
+  .col7 {
+    margin-right: 10px;
+    margin-bottom: 3px;
+
+    @include mq(max, 860) {
+      margin-right: 0;
+    }
+  }
+}
+
+
+//text-rightSec
+.text-rightSec {
+  background: $black;
+  padding: 7px 15px;
+  //width: 245px;
+  margin-bottom: 3px;
+  float: right;
+
+  @include mq(max, 450) {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 19px;
+    @include montserrat(medium500);
+    color: $yellow;
+    text-transform: uppercase;
+    display: inline;
+    border-bottom: 0;
+
+    &:after {
+      content: none;
+    }
+  }
+
+  img {
+    display: inline-block;
+    margin: 0 10px 0 20px;
+    position: relative;
+    top: -3px;
+  }
+
+  h2 {
+    font-size: 30px;
+    @include montserrat(medium500);
+    color: $white;
+    display: inline;
+
+    span {
+      font-size: 24px;
+    }
+  }
+}
+
+//ajouter-annonce
+.ajouter-annonce {
+  width: 300px;
+  padding: 12px 15px;
+
+  @include mq(max, 767) {
+    width: 100%;
+  }
+
+  h3 {
+    @include arial(bold700);
+    font-size: 16px;
+    color: $white;
+    text-transform: none;
+    text-decoration: underline;
+
+    a {
+      color: $white;
+    }
+  }
+
+  img {
+    top: 0;
+    margin: 0 12px 0 11px;
+  }
+}
+
+//rewards-sec
+.rewards-sec {
+  padding: 56px 35px;
+  border: 1px solid $border;
+
+  @include mq(max, 767) {
+    padding: 30px 15px;
+  }
+
+  @include mq(max, 449) {
+    border: none;
+  }
+
+  @include mq(max, 425) {
+    padding: 30px 0;
+  }
+
+
+  h3 {
+    font-size: 21px;
+    @include montserrat(regular400);
+    letter-spacing: 0.3px;
+    margin-bottom: 30px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #ebebeb;
+    position: relative;
+
+    &:after {
+      content: '';
+      width: 90px;
+      height: 3px;
+      background: $orange;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+
+    @include mq(max, 425) {
+      padding: 0 15px;
+    }
+  }
+
+
+  p {
+    font-size: 16px;
+    @include arial(regular400);
+    margin-bottom: 35px;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+
+    @include mq(min, 1366) {
+      //margin-bottom: 90px;
+    }
+
+
+    &.small-right {
+      font-size: 12px;
+      @include arial(regular400);
+      color: rgba(0, 0, 0, 0.58);
+      margin-top: -4px;
+      letter-spacing: 0.2px;
+      margin-bottom: 30px;
+    }
+  }
+
+  //chams-obligatoire
+  .chams-obligatoire {
+    font-size: 11px;
+    margin-bottom: 15px;
+
+    @include mq(min, 767) {
+      position: absolute;
+      top: 35px;
+      right: 35px;
+    }
+
+  }
+
+  .media {
+    margin-bottom: 35px;
+
+    @include mq(min, 1366) {
+      margin-bottom: 55px;
+    }
+  }
+
+  .media-left, .media-body {
+    vertical-align: middle;
+  }
+
+  .media-left {
+    img {
+    }
+  }
+
+  .media-body {
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .rewards-ul {
+    text-align: center;
+
+    li {
+      width: 241px;
+      display: inline;
+
+      a {
+      }
+
+
+      &:first-child {
+        a {
+          margin-right: 50px;
+
+          @include mq(max, 767) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  //soldes-historique
+  &.soldes-historique {
+    padding: 0;
+
+    //historique-ul
+    .historique-ul {
+      background: #ebe8e0;
+      padding: 20px 15px;
+      text-align: right;
+
+      @include mq(max, 700) {
+        text-align: left;
+      }
+
+      li {
+        display: inline-block;
+        margin-right: 38px;
+
+        @include mq(max, 700) {
+          display: block;
+          margin-bottom: 15px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          font-size: 15px;
+          @include arial(regular400);
+          color: $black;
+
+          &:hover {
+            color: $yellow;
+          }
+
+          img {
+            display: inline-block;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+
+    //pSec-soldes
+    .pSec-soldes {
+      padding: 35px 35px 0;
+      position: relative;
+
+      @include mq(max, 767) {
+        padding: 30px 15px;
+      }
+
+      @include mq(max, 425) {
+        padding: 30px 0;
+      }
+    }
+
+    //bien-annonce
+    .bien-annonce {
+      background: #f8f8f8;
+      padding: 24px 20px;
+      margin-bottom: 6px;
+
+      @include mq(max, 425) {
+        padding: 15px;
+      }
+
+      p {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &.soldes-address {
+    .bien-annonce {
+      padding: 15px 20px 50px;
+
+      @include mq(max, 425) {
+        padding: 15px;
+      }
+    }
+  }
+
+  //bien-annonce
+  .bien-annonce {
+    table {
+      thead {
+        tr {
+          th {
+            font-size: 16px;
+            @include arial(regular400);
+            margin-bottom: 35px;
+            letter-spacing: 0.3px;
+            line-height: 1.4;
+            border: none;
+            padding: 8px 20px;
+
+            .small-text {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            border: none;
+
+
+            .small-text {
+              font-size: 13px;
+              padding-left: 5px;
+            }
+
+            &:first-child {
+              width: 62%;
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  .pagination-custom {
+    padding: 30px 15px;
+  }
+
+  //btn-bottomLink
+  .btn-bottomLink {
+    text-align: center;
+    display: block;
+    color: $black;
+    @include arial(regular400);
+    text-decoration: underline;
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  //vente-rapide
+  &.vente-rapide {
+    padding: 25px 0;
+    border: none;
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  //middle-contact
+  &.middle-contact {
+    padding: 0;
+    border: none;
+
+
+    .mobile-chatSec {
+      padding: 0;
+
+      p {
+        font-size: 15px;
+        @include arial(regular400);
+        line-height: 1.5;
+      }
+    }
+
+
+    .edit-text {
+      font-size: 14.79px !important;
+      border-bottom: 0;
+
+      &:after {
+        content: none;
+      }
+    }
+
+    p {
+      margin-bottom: 30px;
+
+      @include mq(max, 425) {
+        margin-bottom: 15px;
+      }
+    }
+
+    //chams-obligatoire
+    .chams-obligatoire {
+      @include mq(max, 425) {
+        margin-top: 15px;
+      }
+    }
+
+    //panel-body-2
+    .panel-body-2 {
+      form {
+        @include full-width;
+      }
+    }
+  }
+
+  &.office-address {
+    border: none;
+    padding: 0;
+
+    .bancaire-center {
+      margin: 24px 0 73px;
+    }
+
+    .small-text {
+      font-size: 12px;
+    }
+  }
+
+  &.office-home {
+    border: none;
+    padding: 0;
+
+    //home-boxSection
+    .home-boxSection {
+      padding: 25px 15px;
+      border: 1px solid $border;
+      position: relative;
+      height: 147px;
+      margin-bottom: 30px;
+
+      .box-a {
+        @include img-center(both);
+        width: 100%;
+      }
+
+
+      img {
+        display: block;
+        margin: 0 auto 25px;
+      }
+
+      .digit-value {
+        @include montserrat(medium500);
+        font-size: 30px;
+        text-align: center;
+        color: $yellow;
+        text-transform: uppercase;
+        min-height: 46px;
+        margin-bottom: 25px;
+        display: block;
+
+
+        @include mq(min, 992) {
+          position: relative;
+          bottom: -14px;
+        }
+      }
+
+      .doller-icon {
+        font-size: 24px;
+      }
+
+      p {
+        @include montserrat(medium500);
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $lblk-btn;
+        text-align: center;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.graph-section {
+    padding: 16px 0;
+    margin-bottom: 20px;
+
+
+    .earning-graph {
+      img {
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+
+//btn-download
+.btn-download {
+  font-size: 15px;
+  @include arial(bold700);
+  color: $black;
+  background: $gray-down;
+  border: 1px solid $border;
+  @include border-radius(0);
+  text-align: left;
+  height: 50px;
+  width: 241px;
+  position: relative;
+  padding-left: 48px;
+  padding-top: 7px;
+  line-height: 1.19;
+  letter-spacing: 0.3px;
+
+  @include mq(max, 767) {
+    width: 100%;
+    margin-bottom: 15px;
+
+  }
+
+  img {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    background: $dark-gray;
+    border-color: $border;
+  }
+}
+
+/*=============================================================================================
+---------------------------- Middle-Office-Inventaire --------------------------------------------
+===================================================================================================*/
+.bien-annonce {
+  background: #f9f8f4;
+  padding: 15px 20px 60px;
+  border-bottom: 1px solid $border;
+  position: relative;
+  margin-bottom: 20px;
+
+  @include mq(max, 425) {
+    padding: 15px;
+  }
+
+  .no-produit {
+    justify-content: space-between;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    @include mq(max, 425) {
+      display: block;
+    }
+
+    li {
+      font-size: 15px;
+      color: rgba(0, 0, 0, .84);
+      @include arial(regular400);
+      display: inline-block;
+
+      @include mq(max, 425) {
+        margin-bottom: 15px;
+        display: table;
+      }
+
+      &:last-child {
+        @include mq(max, 425) {
+          margin-bottom: 0;
+        }
+      }
+
+      .btn {
+        font-size: 15px;
+        @include arial(bold700);
+        color: $black;
+        float: right;
+        border-radius: 0;
+        background: $white;
+        border: 1px solid $border;
+        padding: 4px 25px;
+
+
+        //@include mq(min, 580){
+        //  position: relative;
+        //  top: -9px;
+        //}
+
+        &:hover {
+          background: $yellow;
+          color: $white;
+          border-color: $yellow;
+        }
+
+        &.bg-gray {
+          background: $gray-down;
+        }
+      }
+    }
+  }
+
+
+  .media {
+    .media-left {
+      padding-right: 22px;
+
+      @include mq(max, 425) {
+        display: block;
+        margin-bottom: 15px;
+        padding-right: 0;
+      }
+
+      img {
+        width: 111px;
+        height: auto;
+
+        @include mq(max, 425) {
+          width: 100%;
+        }
+      }
+    }
+
+    .media-body {
+      p {
+        font-size: 17px;
+        margin-bottom: 20px;
+        letter-spacing: -0.7px;
+      }
+
+      //quantite-prix
+      .quantite-prix {
+        li {
+          font-size: 17px;
+          margin-bottom: 20px;
+          display: inline-block;
+          @include arial(regular400);
+          letter-spacing: 0.2px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .edit-produit {
+    position: absolute;
+    right: 35px;
+
+    @include mq(max, 425) {
+      position: static;
+      text-align: right;
+    }
+
+    li {
+      display: inline-block;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+
+      a {
+        color: rgba(0, 0, 0, .84);
+        font-size: 15px;
+        @include arial(regular400);
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        i.fa {
+          padding-right: 5px;
+        }
+
+        img {
+          display: inline-block;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}
+
+
+/*=============================================================================================
+---------------------------- Middle-Office-Soldes --------------------------------------------
+===================================================================================================*/
+.rewards-sec {
+  //soldes-ul
+  .soldes-ul {
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(max, 600) {
+      display: block;
+    }
+
+    li {
+      display: inline-block;
+      width: 100%;
+
+      @include mq(max, 600) {
+        width: auto;
+      }
+
+      &:first-child {
+        a {
+          margin-right: 0 !important;
+        }
+      }
+
+      &:last-child {
+        a {
+          border-right: none;
+          border-bottom: none;
+        }
+      }
+
+
+      a {
+        border: none;
+        background: transparent;
+        box-shadow: none;
+        outline: none;
+        text-align: center;
+        width: 100%;
+        padding: 10px 25px;
+        display: block;
+        height: auto;
+        border-right: 1px solid $border;
+        line-height: 1.4;
+
+        @include min-max(992, 1053) {
+          padding: 10px 15px;
+        }
+
+        @include mq(max, 690) {
+          padding: 10px 15px;
+        }
+
+        @include mq(max, 630) {
+          padding: 10px 5px;
+        }
+
+
+        &:active {
+          box-shadow: none;
+          outline: none;
+        }
+
+        &:hover {
+          border-color: none;
+          background: transparent;
+          color: $yellow;
+          text-decoration: underline;
+        }
+
+        img {
+          position: static;
+          margin: 0 auto 7px;
+        }
+      }
+
+      @include mq(max, 425) {
+        display: block;
+
+        a {
+          border-right: none;
+          border-bottom: 1px solid $border;
+        }
+      }
+    }
+  }
+}
+
+
+//soldes-histopsect
+.soldes-histopsect {
+
+}
+
+
+/*=============================================================================================
+---------------------------- Middle-Office-Soldes-compte-bancaire --------------------------------------------
+===================================================================================================*/
+//bancaire-center
+.bancaire-center {
+  margin: 97px 0 73px;
+
+  @include mq(max, 992) {
+    margin: 50px 0;
+  }
+
+  @include mq(max, 767) {
+    margin: 30px 0;
+  }
+
+  //vertical-block
+  .img-center {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 53px;
+    background: $lblk-btn;
+    border-radius: 100%;
+    position: relative;
+
+    @include mq(max, 992) {
+      margin: 0 auto 30px;
+    }
+
+    img {
+      margin: 0 auto;
+      @include img-center(both);
+    }
+
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 18px;
+    @include arial(regular400);
+  }
+}
+
+//bancaire-center-form
+.bancaire-center-form {
+  position: relative;
+
+
+  .chams-obligatoire {
+    position: static !important;
+  }
+
+  h3 {
+    border-bottom: none;
+
+    &:after {
+      content: none;
+    }
+  }
+}
+
+//mb108
+.mb108 {
+  margin-bottom: 30px;
+
+  @include mq(min, 992) {
+    margin-bottom: 108px;
+  }
+
+  //btn-simple
+  .btn-simple {
+    width: auto;
+  }
+}
+
+
+//mb55
+.mb55 {
+  margin-bottom: 30px;
+
+  @include mq(min, 992) {
+    margin-bottom: 55px;
+  }
+
+  //btn-simple
+  .btn-simple {
+    width: auto;
+
+    @include mq(max, 630) {
+      width: 100%;
+    }
+  }
+}
+
+//mb25
+.mb25 {
+  margin-bottom: 25px;
+
+
+  //btn-simple
+  .btn-simple {
+    width: auto;
+
+    @include mq(max, 630) {
+      width: 100%;
+    }
+  }
+}
+
+
+//mb25
+.mb00 {
+  margin-bottom: 0;
+
+
+  //btn-simple
+  .btn-simple {
+    width: auto;
+
+    @include mq(max, 630) {
+      width: 100%;
+    }
+  }
+}
+
+
+//showContent-details
+.showContent-details {
+  padding: 15px;
+  margin: 15px;
+  border: 1px solid $border;
+
+  h3 {
+    margin-bottom: 15px !important;
+  }
+
+  ul {
+    li {
+      font-size: 16px;
+      @include arial(regular400);
+      display: block;
+      color: $black;
+      padding: 12px 0;
+      border-bottom: 1px solid $border;
+
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        font-size: 13px;
+        @include arial(regular400);
+        color: $black;
+        letter-spacing: 0.5px;
+
+        img {
+          position: relative;
+          width: 10px;
+          margin-right: 15px;
+        }
+      }
+
+      .text-right {
+        float: right;
+      }
+    }
+  }
+}
+
+
+//price-details
+.price-details {
+  padding-left: 28px;
+  margin-bottom: 30px;
+  text-align: right;
+
+  @include mq(min, 992) {
+    padding: 16px 7px 12px 28px;
+    text-align: left;
+  }
+
+  h2 {
+    font-size: 19px;
+    @include arial(regular400);
+    color: $black;
+  }
+
+
+  .darkred-price {
+    color: $darkred;
+    font-weight: bold;
+  }
+
+  .small-text {
+    font-size: 15px;
+    font-style: italic;
+    margin-left: 15px;
+  }
+}
+
+//information
+.information {
+  font-size: 19px;
+  @include arial(regular400);
+  margin-bottom: 30px;
+
+
+  img {
+    display: inline-block;
+    margin-right: 14px;
+    position: relative;
+    top: -8px;
+  }
+}
+
+
+/*=============================================================================================
+---------------------------- Middle-Office-Abonnes --------------------------------------------
+===================================================================================================*/
+//vente-abonnes
+.vente-abonnes {
+  @include full-width;
+
+  ul {
+    font-size: 0;
+    text-align: center;
+
+    li {
+      width: 143px;
+      height: auto;
+      //margin-bottom: 25px;
+      margin-right: 10px;
+      display: inline-block;
+
+      .abonnes-box {
+        color: $black;
+        font-size: 15px;
+        @include arial(regular400);
+        text-align: center;
+        display: block;
+        padding: 20px 15px;
+        width: 100%;
+        border: 1px solid $border;
+        margin-bottom: 12px;
+        max-height: 143px;
+
+        &:hover {
+          background: $border;
+
+
+          img {
+            @include box-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+          }
+        }
+
+        img {
+          width: 62px;
+          height: 62pt;
+          border-radius: 100%;
+          max-width: 60px;
+          max-height: 62px;
+          display: block;
+          margin: 0 auto 18px;
+        }
+      }
+
+
+      .abonnes-close {
+        font-size: 13px;
+        @include arial(regular400);
+        color: $black;
+        letter-spacing: 0.5px;
+        text-align: center;
+        display: block;
+
+        img {
+          position: relative;
+          width: 10px;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+//clients-details
+.clients-details {
+
+
+  //details-ul
+  .details-ul {
+    background: #f9f8f4;
+    padding: 20px 20px 10px;
+
+    @include mq(min, 993) {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 25px;
+      @include arial(regular400);
+      font-size: 16px;
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-right: 0;
+
+      }
+    }
+
+    &.row {
+      margin-left: 0;
+      margin-right: 0;
+      background: #ebe8e0;
+
+      .col-md-4 {
+        padding: 0;
+      }
+    }
+  }
+
+  //details-more
+  .details-more {
+    background: $gray;
+    padding: 20px 20px 50px;
+    margin-bottom: 45px;
+
+    p {
+      font-size: 16px;
+      @include arial(regular400);
+      line-height: 1.8;
+
+      &:last-child {
+        margin-bottom: 30px;
+      }
+    }
+
+    a {
+      font-size: 14px;
+      @include arial(regular400);
+      color: $darkred;
+      text-decoration: underline;
+    }
+
+    &.vente-detail {
+
+      padding: 20px 20px;
+    }
+  }
+
+  //eql-height
+  .eql-height {
+    position: relative;
+    height: auto;
+    margin-bottom: 30px;
+
+    @include mq(min, 1200) {
+      min-height: 220px;
+    }
+
+
+    a {
+      margin-top: 15px;
+      display: block;
+
+      @include mq(min, 1200) {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+      }
+    }
+  }
+
+
+  .btn-border {
+    float: none;
+    display: table;
+    margin: 0 auto 40px;
+    text-align: center;
+    white-space: normal;
+
+    &.vente-btn {
+      font-size: 17px;
+      @include arial(bold700);
+      text-transform: none;
+    }
+  }
+}
+
+
+/*=============================================================================================
+---------------------------- Middle-Office-Revues --------------------------------------------
+===================================================================================================*/
+.revues-section {
+  margin-bottom: 30px;
+
+  @include mq(min, 767) {
+    margin-bottom: 35px;
+  }
+
+  .date-topRight {
+    p {
+      font-size: 13px;
+      @include arial(regular400);
+      color: lighten($black, 60);
+      text-align: right;
+      margin-bottom: 10px;
+      padding-right: 24px;
+
+      @include mq(max, 992) {
+        padding-right: 0;
+      }
+    }
+
+    @include mq(max, 767) {
+      text-align: left;
+    }
+  }
+
+  //review-details
+  .review-details {
+    padding: 23px;
+    background: #fafafa;
+
+    .ftr-cnt {
+      padding: 0;
+      margin-bottom: 15px;
+
+      i.fa {
+        padding-right: 5px;
+        font-size: 14px;
+      }
+    }
+
+  }
+
+  //review-star
+  .review-star {
+    margin-bottom: 12px;
+
+    li {
+      display: inline-block;
+      color: $dark-gray;
+
+      &.active {
+        color: $yellow;
+      }
+
+      i.fa {
+      }
+    }
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px !important;
+  }
+}
+
+
+/*=============================================================================================
+---------------------------- Middle-Office-Vente Details --------------------------------------------
+===================================================================================================*/
+.table-venteDetail {
+  margin-bottom: 50px;
+
+  @include mq(max, 767) {
+    margin-bottom: 30px;
+  }
+
+  h3 {
+    @include arial(bold700);
+    font-size: 17px;
+    color: $black;
+    margin-bottom: 30px;
+  }
+
+  &.mb5h3 {
+    h3 {
+      margin-bottom: 5px;
+    }
+  }
+
+  p {
+    font-size: 17px;
+    @include arial(regular400);
+    display: block;
+    color: $black;
+    padding: 3px 0;
+  }
+
+  .media {
+    margin: 0;
+
+    //media-left
+    .media-left {
+      padding-right: 33px;
+
+      @include mq(max, 425) {
+        display: block;
+        padding-right: 0;
+        margin-bottom: 15px;
+      }
+
+      //imgCustom-width
+      .imgCustom-width {
+        width: 111px;
+        height: 111px;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 15px;
+
+        @include mq(max, 425) {
+          width: 100%;
+          height: 240px;
+          margin-bottom: 5px;
+        }
+
+        img {
+          width: auto;
+          @include img-center(both);
+          height: 100%;
+
+          @include mq(max, 425) {
+            width: 100%;
+          }
+        }
+      }
+
+      p {
+        text-align: center;
+        font-size: 14px;
+      }
+
+    }
+
+    //media-body
+    .media-body {
+      ul {
+        margin-top: -4px;
+
+        li {
+          font-size: 17px;
+          @include arial(regular400);
+          display: block;
+          color: $black;
+          padding: 3px 0;
+          border-bottom: 1px solid $border;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .text-right {
+            text-align: right;
+            float: right;
+            padding-right: 15px;
+
+
+            @include mq(max, 767) {
+              float: none;
+              display: block;
+            }
+          }
+
+          //color-yellow
+          .color-yellow {
+            color: $darkred;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+
+/*=============================================================================================
+---------------------------- Middle-Office-Inventaire Ajouter Produit --------------------------------------------
+===================================================================================================*/
+.inventaire-ajouter {
+  h3 {
+    @include roboto(regular400);
+    font-size: 17px;
+    padding-left: 13px;
+    margin-top: 25px;
+  }
+}
+
+//form-upload
+.form-upload {
+  label {
+    width: 100%;
+  }
+
+  //file-input-button
+  .file-input-button {
+    @include arial(regular400);
+    font-size: 17px;
+    color: $black;
+    height: 48px;
+    display: block;
+    border: 1px solid $border;
+    padding: 12px;
+    width: 100%;
+    letter-spacing: 0.5px;
+
+    img {
+      display: inline-block;
+      margin-right: 12px;
+      position: relative;
+    }
+
+  }
+
+  //file-list-x
+  #file-list-x {
+    //imgTitle-show
+    .imgTitle-show {
+      font-size: 15px;
+      @include arial(medium500);
+      color: $black;
+      letter-spacing: 0.6px;
+
+      //img-close
+      .img-close {
+        padding-left: 9px;
+        padding-right: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/**
+ * FilePond Custom Styles
+ */
+.visually-hidden { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+//inline-flex
+.inline-flex {
+  display: flex;
+  justify-content: center;
+
+  @include mq(max, 730) {
+    display: block;
+  }
+
+  li {
+    margin: 30px 5px;
+
+    @include mq(max, 730) {
+      margin: 15px 0;
+    }
+  }
+
+  .btn-simple {
+    width: 204px;
+
+    @include mq(max, 730) {
+      width: 100%;
+    }
+  }
+
+  .bg-gray {
+    margin-right: 0;
+  }
+}
+
+//addText-group
+.addText-group {
+  position: relative;
+
+  .form-control {
+    padding-left: 45px;
+  }
+
+  .onClick {
+    font-size: 17px;
+    @include arial(regular400);
+    letter-spacing: 0.6px;
+    color: $black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50px;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+
+    em {
+      font-size: 15px;
+    }
+  }
+
+  img {
+    position: absolute;
+    @include img-center(vertical);
+    left: 12px;
+
+
+    &.equal-hight {
+      top: 65%;
+    }
+  }
+}
+
+
+//graph-contentSec
+.graph-contentSec {
+  padding: 31px 22px;
+  border: 1px solid $border;
+  margin-bottom: 10px;
+
+  h3 {
+    @include arial(bold700);
+    font-size: 18px;
+    color: $lblk-btn;
+    margin-bottom: 15px;
+    letter-spacing: 0.3px;
+
+    //yellow-color
+    .yellow-color {
+      color: $yellow;
+    }
+  }
+
+  //line
+  .line {
+    height: 1px;
+    width: 100%;
+    background: $yellow;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    padding-left: 15px;
+    margin-bottom: 8px;
+
+    li {
+      a {
+        @include montserrat(medium500);
+        font-size: 15px;
+        color: $lblk-btn;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 5px;
+        letter-spacing: 0.4px;
+
+        .digit-value {
+          font-size: 30px;
+          color: $yellow;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+
+  //btn-order
+  .btn-order {
+    @include arial(bold700);
+    font-size: 14px;
+    color: $black;
+    letter-spacing: 0.3px;
+
+    img {
+      display: inline-block;
+      position: relative;
+      top: -2px;
+      padding-right: 7px;
+    }
+  }
+
+
+  &.small-padding {
+    padding: 22px;
+
+    ul {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+
+//none-hide
+.none-hide {
+  opacity: 0;
+  visibility: hidden;
+
+  @include mq(max, 650) {
+    display: none !important;
+  }
+}
+
+
+//.label-info
+.label-info {
+  background: $yellow;
+  @include roboto(regular400);
+  color: $white;
+  font-size: 12px;
+  border-radius: 0;
+  position: relative;
+  top: -3px;
+  padding: 2px 10px;
+  text-transform: capitalize;
+}
+
+@keyframes anim {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes anim1 {
+  100% {
+    transform: scaleY(0);
+  }
+  0% {
+    transform: scaleY(1);
+  }
+}

@@ -1,0 +1,196 @@
+/*=============================================================================================
+---------------------------- Nous-Contacter --------------------------------------------
+===================================================================================================*/
+.nous-contacter {
+  .panier2-accordion {
+    .d-inlineBlock {
+      display: inline-block;
+    }
+
+    //select-bg
+    .select-bg .jcf-select {
+      -webkit-appearance: none;
+      background: url(../img/select-yellow.png);
+      background-repeat: no-repeat;
+      background-position: top 1px right 1px;
+      cursor: pointer;
+      padding-right: 50px !important;
+      width: 100%;
+      height: 48px;
+    }
+
+    //textarea
+    textarea {
+      height: 165px;
+      resize: none;
+
+      @include mq(max, 425){
+        height: 100px;
+      }
+    }
+
+    .edit-text {
+      font-size: 19.56px !important;
+      text-align: left;
+      text-transform: uppercase;
+      color: $black;
+      float: left;
+      width: 100%;
+      display: flex;
+      letter-spacing: 3px;
+      @include arial(regular400);
+    }
+
+    .middle-contact {
+      .edit-text {
+        font-size: 14.79px !important;
+        letter-spacing: 2.7px;
+      }
+    }
+  }
+}
+
+//panier2-accordion
+.panier2-accordion {
+  //select-bg
+  .select-bg, .jcf-select {
+    -webkit-appearance: none;
+    background: url(../img/select-yellow.png);
+    background-repeat: no-repeat;
+    background-position: top 1px right 1px;
+    cursor: pointer;
+    padding-right: 50px !important;
+    width: 100%;
+    height: 48px;
+  }
+}
+
+
+//mobile-chatSec
+.mobile-chatSec {
+  @include mq(max, 992) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  //flex-item
+  .flex-item {
+    @include mq(max, 992) {
+      display: block;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    @include arial(regular400);
+
+    @include mq(max, 992) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+//ul-sec
+.ul-sec {
+
+
+  ul {
+    display: flex;
+
+
+    li {
+      display: inline-block;
+      padding-left: 37px;
+      margin-right: 44px;
+      padding-top: 25px;
+      padding-bottom: 15px;
+      position: relative;
+      border-left: 1px solid $border;
+
+      @include mq(max, 414) {
+        margin-right: 15px;
+        padding-left: 30px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateX(-50%);
+        left: 7px;
+        width: 17px;
+        height: 20px;
+        background: url("../img/arrow-right.png");
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      img {
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        @include arial(regular400);
+        font-size: 12.59px;
+        text-transform: uppercase;
+        color: $black;
+        letter-spacing: 2.5px;
+        margin-bottom: 5px;
+        border-bottom: none;
+
+        &:after {
+          content: none;
+        }
+
+
+        @include mq(max, 425){
+          padding: 0;
+        }
+      }
+
+
+      h4 {
+        color: $yellow;
+        font-size: 19.78px;
+        @include arial(bold700);
+        margin-bottom: 12px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &.par-tchat {
+          font-size: 16.18px;
+        }
+      }
+
+      p {
+        font-size: 15px;
+        @include arial(regular400);
+        color: $black;
+        line-height: 1.3;
+      }
+    }
+  }
+}
+
+
+//nous-popup
+.nous-popup {
+  .thnx-text {
+    h3 {
+      font-size: 21px;
+      @include arial(regular400);
+      margin-bottom: 35px;
+    }
+
+    p {
+    }
+  }
+}
+
+/*=============================================================================================
+---------------------------- End-Nous-Contacter --------------------------------------------
+===================================================================================================*/

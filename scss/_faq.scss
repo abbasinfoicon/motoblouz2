@@ -1,0 +1,578 @@
+/*=============================================================================================
+---------------------------- FAQ SCSSS --------------------------------------------
+===================================================================================================*/
+.questions-reponses {
+  padding: 54px 45px 40px;
+
+  @include mq(max, 992) {
+    padding: 40px 15px;
+  }
+
+  @include mq(max, 425) {
+    padding: 20px 15px;
+  }
+
+  .media, .media-body, .media-left {
+    vertical-align: middle;
+  }
+
+  //media
+  .media {
+    margin-bottom: 42px;
+    padding: 0 40px;
+
+    @include mq(max, 992) {
+      padding: 0;
+    }
+
+    .media-left {
+      padding-right: 20px;
+
+      img {
+      }
+    }
+
+    .media-body {
+      padding-left: 20px;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 75%;
+        width: 1px;
+        background: $blk2;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      p {
+        font-size: 18.1px;
+        @include arial(regular400);
+        color: $black;
+        letter-spacing: -0.05px;
+        line-height: 1.6;
+
+        @include mq(max, 767) {
+          font-size: 15px;
+        }
+
+        @include mq(max, 359) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+
+  /*=============================================================================================
+  ---------------------------- panel-default --------------------------------------------
+  ===================================================================================================*/
+  //panel-group
+  .panel-group {
+    margin-bottom: 78px;
+
+    @include mq(max, 425){
+      margin-bottom: 30px;
+    }
+
+    .panel + .panel {
+      margin-top: 30px;
+
+      @include mq(max, 425){
+        margin-top: 0;
+      }
+    }
+  }
+
+  //panel-default
+  .panel-default {
+    border: none;
+    box-shadow: none;
+
+    //panel-heading
+    .panel-heading {
+      background-color: $white;
+      border: 1px solid $black;
+      padding: 0;
+      @include css3(use-select, none);
+      @include border-radius(0);
+
+      h3 {
+        @include montserrat(medium500);
+        font-size: 19px;
+        color: $black;
+        border-bottom: 0;
+        padding-bottom: 0;
+
+        &:after {
+          content: none;
+        }
+      }
+
+      a {
+        @include montserrat(medium500);
+        font-size: 19px;
+        color: $black;
+        display: block;
+        padding: 18px 77px 18px 38px;
+        line-height: 1;
+        position: relative;
+
+        @include mq(max, 992) {
+          padding: 18px 77px 18px 15px;
+          font-size: 15px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        @include mq(max, 425) {
+          padding-left: 15px;
+        }
+
+        &:after {
+          content: "";
+          top: 0;
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          float: right;
+          transition: transform .25s linear;
+          -webkit-transition: -webkit-transform .25s linear;
+          background: #c0c0c0;
+          width: 78px;
+          position: absolute;
+          right: 0;
+          padding: 20.5px;
+          color: $white;
+          text-align: center;
+
+          @include mq(max, 992) {
+            width: 60px;
+            padding: 18.5px;
+          }
+        }
+      }
+
+      //aria-expanded="true"
+      a[aria-expanded="true"] {
+        background-color: $white;
+
+        &:after {
+          content: "\f068";
+          background-color: $yellow;
+        }
+      }
+
+      //aria-expanded="false"
+      a[aria-expanded="false"]:after {
+        content: "\f067";
+      }
+    }
+
+    //panel-body
+    .panel-body {
+      padding: 36px 37px;
+      border: none !important;
+
+      @include mq(max, 992) {
+        padding: 30px 15px;
+      }
+
+      @include mq(max, 425) {
+        padding: 15px;
+      }
+
+      p {
+        font-size: 16px;
+        @include arial(regular400);
+        margin-bottom: 25px;
+        color: rgba(0, 0, 0, .67);
+
+        @include mq(max, 425){
+          font-size: 15px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+  }
+}
+
+//middle-contact
+.middle-contact {
+
+  //questions-reponses
+  .questions-reponses {
+    padding: 40px 0;
+
+    @include mq(max, 425){
+      padding-bottom: 0;
+    }
+
+    .panel {
+      margin-bottom: 30px;
+
+
+      @include mq(max, 767) {
+        margin-bottom: 10px;
+      }
+    }
+
+    //panel-default
+    .panel-default {
+      .panel-heading {
+        background: #e8e8e8;
+        border: none;
+
+        h3 {
+          margin-bottom: 0;
+
+          @include mq(max, 776) {
+            padding: 0;
+          }
+        }
+
+        a {
+          font-size: 17px;
+          @include arial(bold700);
+          padding: 15px 77px 15px 35px;
+
+          &:after {
+            padding: 16px;
+          }
+        }
+
+        a[aria-expanded="true"] {
+          background-color: transparent;
+        }
+      }
+    }
+
+    .media {
+      .media-body {
+        p {
+          font-size: 16px;
+          margin-bottom: 0;
+
+          a {
+            font-weight: bold;
+            color: $black;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+//button-footer
+.button-footer {
+  .received-code {
+    margin-bottom: 18px;
+
+    a {
+      font-size: 17px;
+      @include montserrat(bold700);
+      color: $black;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+//end-button-footer
+
+
+/*=============================================================================================
+---------------------------- Comment ca Marche --------------------------------------------
+===================================================================================================*/
+//comment-marche
+.comment-marche {
+
+  @include mq(min, 992) {
+    padding: 50px 40px;
+  }
+
+  @include mq(max, 767) {
+    padding: 50px 15px;
+  }
+
+  @include mq(max, 425) {
+    padding: 30px 15px;
+  }
+
+  h3 {
+    font-size: 28px;
+    color: $yellow;
+    @include montserrat(medium500);
+    text-align: center;
+    letter-spacing: -0.4px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 30px;
+
+    @include mq(max, 767) {
+      font-size: 24px;
+      letter-spacing: normal;
+    }
+
+    @include mq(max, 425) {
+      font-size: 20px;
+      padding-bottom: 15px;
+    }
+
+    &:after {
+      content: '';
+      width: 601px;
+      height: 1px;
+      background-color: $blk2;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include mq(max, 767) {
+        width: 100%;
+      }
+    }
+
+    & + p {
+      font-size: 18px;
+      @include arial(bold700);
+      color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      line-height: 1.5;
+      margin-bottom: 85px;
+
+      @include mq(max, 992) {
+        margin-bottom: 50px;
+      }
+
+      @include mq(max, 767) {
+        margin-bottom: 30px;
+      }
+
+      @include mq(max, 425) {
+        margin-bottom: 15px;
+        font-size: 15px;
+      }
+    }
+  }
+
+  p {
+    font-size: 17px;
+    @include arial(regular400);
+    letter-spacing: -0.4px;
+    margin-bottom: 20px;
+
+    strong {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 22px;
+      display: block;
+
+      @include mq(max, 767) {
+        letter-spacing: normal;
+      }
+
+
+      @include mq(max, 425) {
+        margin-bottom: 15px;
+        font-size: 15px;
+      }
+    }
+
+    &:empty {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    float: left;
+    padding-right: 35px;
+    padding-bottom: 25px;
+    height: 228px!important;
+    width: auto!important;
+
+    @include mq(max, 600){
+      padding-right: 0;
+      padding-bottom: 15px;
+      float: none;
+      width: 100%!important;
+      height: auto!important;
+    }
+  }
+
+
+  //left-section-custom
+  .left-section-custom {
+    text-align: left;
+
+    img {
+      float: left;
+      padding-right: 35px;
+      padding-bottom: 35px;
+    }
+  }
+
+  //right-section-custom
+  .right-section-custom {
+    text-align: right;
+
+    img {
+      float: right;
+      padding-left: 35px;
+      padding-bottom: 35px;
+    }
+  }
+
+  .line-bottom {
+    width: 601px;
+    height: 1px;
+    background-color: $blk2;
+    margin: 0 auto 25px;
+
+    @include mq(max, 767) {
+      width: 100%;
+    }
+  }
+
+  h4 {
+    font-size: 18px;
+    @include arial(bold700);
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 85px;
+
+    @include mq(max, 992) {
+      margin-bottom: 50px;
+    }
+
+    @include mq(max, 767) {
+      margin-bottom: 30px;
+    }
+
+    @include mq(max, 425) {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+
+}
+
+//comment-leftRight
+.comment-leftRight {
+  .media {
+    margin-bottom: 98px;
+
+    @include mq(max, 992) {
+      margin-bottom: 50px;
+    }
+
+    @include mq(max, 767) {
+      margin-bottom: 30px;
+    }
+
+    @include mq(max, 767) {
+      margin-bottom: 20px;
+    }
+
+    //media-left
+    .media-left {
+      padding-right: 35px;
+    }
+
+    //media-right
+    .media-right {
+      padding-left: 35px;
+    }
+
+    .media-left, .media-right {
+      width: 239px;
+      height: 228px;
+
+      @include mq(max, 767) {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      img {
+        width: inherit;
+
+        @include mq(max, 767) {
+          margin: 0 auto 30px;
+        }
+      }
+    }
+
+
+    //media-body
+    .media-body {
+      p {
+        font-size: 17px;
+        @include arial(regular400);
+        letter-spacing: -0.4px;
+        margin-bottom: 20px;
+
+        span {
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 22px;
+          display: block;
+
+          @include mq(max, 767) {
+            letter-spacing: normal;
+          }
+
+          @include mq(max, 767) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+
+    //left-section
+    &.left-section {
+      .media-body {
+        p {
+          text-align: left;
+
+          @include mq(max, 767) {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    //right-section
+    &.right-section {
+      .media-body {
+        p {
+          text-align: right;
+
+          @include mq(max, 767) {
+            text-align: center;
+          }
+        }
+      }
+
+      .media-right {
+        @include mq(max, 767) {
+          display: table-header-group;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

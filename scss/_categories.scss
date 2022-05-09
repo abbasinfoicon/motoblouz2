@@ -1,0 +1,489 @@
+/*========================================================================================================
+================================ Categories Scss ===================================================================
+===========================================================================================================*/
+//owl-product
+.sous-categorie {
+  padding: 90px 20px 40px;
+  background: $white;
+  border: 1px solid $border;
+
+  @include mq(min, 1367) {
+    padding: 40px 60px;
+  }
+
+  @include mq(max, 992) {
+    padding: 30px;
+  }
+
+  @include mq(max, 767) {
+    padding: 0 15px;
+  }
+
+  @include mq(max, 414) {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .card-custom {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include mq(max,425){
+      margin-bottom: 10px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .col-md-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+    @include mq(max, 425){
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  //owl-prev
+  .owl-prev {
+    right: 45px;
+  }
+
+  //owl-next
+  .owl-next {
+    right: 0;
+  }
+
+  &.category-page {
+    padding: 35px 20px;
+
+    @include mq(max, 767) {
+      padding: 15px;
+    }
+  }
+
+
+  &.wishlistD {
+    padding: 20px;
+    border: 0;
+
+    @include mq(max, 425){
+      padding: 0;
+    }
+  }
+}
+
+
+//mb80
+.mb80 {
+  margin-bottom: 80px;
+
+  @include mq(max, 767) {
+    margin-bottom: 30px;
+  }
+}
+
+//mb50
+.mb50 {
+  margin-bottom: 50px;
+
+  @include mq(max, 767) {
+    margin-bottom: 30px;
+  }
+
+  @include mq(max, 425) {
+    margin-bottom: 15px;
+  }
+}
+
+//item-box
+.item-box {
+  margin-bottom: 50px;
+
+  @include mq(max, 992) {
+    margin-bottom: 30px;
+  }
+
+  //emplorer-product
+  .emplorer-product {
+    @include mq(min, 1366) {
+      width: 238px;
+      height: 238px;
+    }
+    border-color: $graybtn;
+    margin: 0 auto;
+
+    h3 {
+      @include roboto(bold700);
+      text-transform: none;
+      font-size: 16px;
+    }
+
+    img {
+      max-height: 145px;
+    }
+  }
+}
+
+//product-prices
+.product-prices {
+  padding: 30px 15px 15px;
+
+  .custom-padding {
+    padding: 0 10px;
+
+    @include mq(max, 425){
+      padding: 0;
+    }
+  }
+
+  h2 {
+    font-size: 46.03px;
+    @include montserrat(medium500);
+
+    sup {
+      font-size: 16.87px;
+      top: -24px;
+      left: -15px;
+    }
+
+    span {
+      font-size: 20.01px;
+    }
+
+    a {
+      float: right;
+      font-size: 25px;
+      position: relative;
+      right: 15px;
+      top: 8px;
+      color: $black;
+
+      &:hover {
+        color: $darkred;
+
+        i.fa {
+          &:before {
+            content: "\f004";
+          }
+        }
+      }
+
+      &.show {
+        color: $darkred;
+
+        i.fa {
+          &:before {
+            content: "\f004";
+          }
+        }
+      }
+    }
+  }
+
+  //select-position
+  .select-position {
+    margin-bottom: 12px;
+
+    select {
+      margin-right: 0;
+    }
+
+    &.select-quantite {
+      &:after {
+        right: 47px;
+      }
+    }
+  }
+
+  //line-divider
+  .line-divider {
+    width: 100%;
+    left: auto;
+    margin-bottom: 30px;
+  }
+
+  //priceMainsec
+  .priceMainsec {
+    margin-bottom: 23px;
+
+    @include mq(max, 425){
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-size: 17px;
+      @include arial(regular400);
+      margin-bottom: 17px;
+
+      img {
+        display: inline-block;
+      }
+
+      .color-yellow {
+        color: $yellow;
+      }
+    }
+
+    p {
+      font-size: 15px; // 17px
+      @include arial(regular400);
+      text-align: left;
+      margin-bottom: 15px;
+      line-height: 1.3;
+
+      span {
+        font-weight: bold;
+        display: block;
+      }
+    }
+  }
+
+  //priceDetails
+  .priceDetails {
+    .btn-simple {
+      margin: 0;
+      margin-bottom: 15px;
+      border: 1px solid $yellow;
+
+      &:hover {
+        border-color: $lblk-button;
+      }
+
+      &.bg-black {
+        background: $lblk-button;
+        border-color: $lblk-button;
+
+        &.btn:focus {
+          color: $white;
+        }
+      }
+
+      &.bg-border {
+        background: transparent;
+        border-color: $lblk-button;
+        color: $lblk-button;
+
+        &:hover {
+          background: $lblk-button;
+          color: $white;
+        }
+      }
+    }
+
+    h5 {
+      margin-bottom: 12.5px;
+      margin-top: 12.5px;
+      text-align: right;
+
+
+      @include mq(max, 992) {
+        text-align: left;
+      }
+    }
+
+    .iconSocial {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+
+      li {
+        margin: 0 7px;
+
+        .tooltip-custom {
+          color: $white;
+          padding: 5px 10px;
+          border-radius: 10px;
+          margin-top: -20px;
+          width: auto;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 8px solid $lblk-button;
+          }
+        }
+
+        &:first-child {
+          .tooltip-custom {
+            transform: translate(-76%, -122%);
+          }
+        }
+
+        &:last-child {
+          .tooltip-custom {
+            transform: translate(5%, -122%);
+          }
+        }
+
+        &:hover {
+          .tooltip-custom {
+            display: block;
+          }
+        }
+      }
+
+      &.notloginCustom{
+        li{
+          &:first-child {
+            .tooltip-custom {
+              transform: translate(-64%, -122%);
+            }
+          }
+
+          &:last-child {
+            .tooltip-custom {
+              transform: translate(-25%, -122%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//color-yellow
+.color-yellow {
+  color: $yellow;
+}
+
+//container-custom
+.container-custom {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+//end-container-custom
+
+//sous-categorie-page
+.sous-categorie-page {
+  .title-heading {
+    margin-bottom: 15px;
+  }
+
+  //filterMargin
+  .filterMargin {
+    margin-bottom: 10px;
+
+    @include mq(min, 992) {
+      padding: 0;
+    }
+  }
+}
+
+//ckb-text
+.ckb-text {
+  label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-size: 14px;
+    @include arial(regular400);
+    color: rgba(0, 0, 0, 0.73);
+    letter-spacing: 0.29px;
+  }
+
+  //etat-label
+  .etat-label {
+    display: flex;
+    align-items: baseline;
+    padding-left: 13px;
+
+    label {
+      font-size: 17px;
+    }
+  }
+}
+
+//end-ckb-text
+
+
+//pagination
+.pagination-custom {
+  @include full-width;
+  text-align: center;
+  padding: 55px 0;
+
+  @include mq(max, 767) {
+    padding-top: 0;
+  }
+
+  ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+
+    li {
+      display: inline-block;
+      width: 31px;
+      height: 31px;
+      border: 1px solid $border;
+      margin: 0;
+      padding: 0;
+      border-right: none;
+      line-height: 31px;
+      overflow: hidden;
+
+      &:last-child {
+        border-right: 1px solid $border;
+      }
+
+      a, span {
+        display: block;
+        font-size: 12px;
+        font-weight: 500;
+        color: $black;
+        @include arial(bold700);
+        padding: 0;
+        border: none;
+        width: 100%;
+        height: 100%;
+        line-height: 31px;
+      }
+
+      img {
+        position: relative;
+        top: -2px;
+        display: inline-block;
+      }
+
+      &.active {
+        a, span {
+          background: $yellow;
+          color: $white;
+          padding: 0;
+          border: none;
+
+
+          &:hover {
+            background: $lblk-button;
+          }
+        }
+      }
+    }
+  }
+}
+
+//end-pagination
+
+
+//rating-stars
+.rating-stars {
+  margin-bottom: 40px;
+  margin-top: -15px;
+}

@@ -1,0 +1,379 @@
+/*========================================================================================================
+================================ Monnaie Scss ===================================================================
+===========================================================================================================*/
+//monnaie-section
+.monnaie-section {
+  p {
+    @include montserrat(medium500);
+    font-size: 14px;
+    color: $black;
+    margin-bottom: 30px;
+
+    @include mq(max, 767) {
+      margin-bottom: 20px;
+    }
+
+    @include mq(max, 425) {
+      margin-bottom: 15px;
+    }
+  }
+
+  //inline-flex
+  .inline-flex {
+    li {
+      @include mq(max, 730) {
+        margin: 0;
+      }
+    }
+  }
+}
+
+//porte-monnaie
+.porte-monnaie {
+  margin-bottom: 30px;
+
+  h5 {
+    @include montserrat(medium500);
+    font-size: 14px;
+    color: $black;
+    margin-left: 18px;
+    letter-spacing: .5px;
+    margin-bottom: 15px;
+
+    @include mq(max, 767) {
+      margin-left: 0;
+
+    }
+  }
+}
+
+//left-mon-solde
+.left-mon-solde {
+
+  //top-solde
+  .top-solde {
+    background: #e8e8e8;
+    padding: 6px 21px;
+
+    img {
+      position: relative;
+      display: inline-block;
+      margin-right: 9px;
+    }
+
+    p {
+      @include montserrat(bold700);
+      font-size: 16px;
+      color: $black;
+      display: inline-block;
+      letter-spacing: 0.3px;
+      margin-bottom: 0;
+
+      @include mq(max, 767) {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+//yellow-solde
+.yellow-solde {
+  background: $yellow;
+  padding: 33px 21px;
+  margin-bottom: 20px;
+
+  @include mq(max, 767) {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    @include montserrat(bold700);
+    color: $white;
+    font-size: 24px;
+    margin-bottom: 18px;
+    letter-spacing: 1.1px;
+
+    @include mq(max, 767) {
+      font-size: 18px;
+    }
+
+    .big-text {
+      font-size: 36px;
+      padding-left: 2px;
+      letter-spacing: 2.2px;
+
+      @include mq(max, 767) {
+        font-size: 30px;
+        letter-spacing: normal;
+      }
+    }
+  }
+
+  p {
+    @include montserrat(medium500);
+    color: $white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    margin-bottom: 0;
+
+    @include mq(max, 767) {
+      letter-spacing: normal;
+      line-height: 1.25;
+    }
+  }
+}
+
+//right-mon-solde
+.right-mon-solde {
+  margin-bottom: 23px;
+
+  ul {
+    li {
+      a {
+        @include montserrat(bold700);
+        text-transform: uppercase;
+        font-size: 16px;
+        color: $white;
+        background: $lblk-button;
+        text-align: center;
+        display: block;
+        margin-bottom: 17px;
+        padding: 10px 15px;
+
+        @include mq(max, 991) {
+          margin-bottom: 5px;
+          font-size: 15px;
+          padding: 5px 15px;
+        }
+      }
+    }
+  }
+}
+
+//vos-informations
+.vos-informations {
+  p {
+    @include montserrat(medium500);
+    font-size: 14px;
+    color: $black;
+    letter-spacing: 0.7px;
+    margin-bottom: 48px;
+    line-height: 1.25;
+
+    @include mq(max, 992) {
+      margin-bottom: 30px;
+    }
+
+    @include mq(max, 767) {
+      margin-bottom: 20px;
+    }
+  }
+
+  label {
+    @include montserrat(medium500);
+    font-size: 14px;
+    color: $black;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+    line-height: 1.2;
+  }
+
+  input {
+    &::placeholder {
+      color: #a0a0a0 !important;
+    }
+  }
+
+  select {
+    color: #a0a0a0 !important;
+  }
+
+
+  //alignFlex
+  .alignFlex {
+    .form-group {
+      display: flex;
+      align-items: center;
+
+      @include mq(max, 768) {
+        display: block;
+      }
+    }
+  }
+}
+
+//edit-mod
+.edit-mod {
+  a {
+    display: inline-block;
+    font-size: 14px;
+    color: $black;
+    @include montserrat(regular400);
+    text-decoration: underline;
+    letter-spacing: .8px;
+
+    img {
+      display: inline-block;
+      position: relative;
+      padding-right: 6px;
+      top: -2px;
+    }
+  }
+}
+
+
+//transfor-request
+.transfor-request {
+
+  .bg-yellow {
+    .form-group {
+      label {
+        @include montserrat(medium500);
+        color: $white;
+        font-size: 14px;
+      }
+
+      input {
+        height: 48px;
+        color: #959595;
+        border-radius: 0;
+        font-size: 14px;
+        letter-spacing: 0.6px;
+        padding: 7px 12px 6px;
+        @include montserrat(medium500);
+      }
+    }
+
+    p {
+      color: $black;
+      letter-spacing: normal;
+    }
+  }
+}
+
+//des-transactions
+.des-transactions {
+  //table-responsive
+  .table-responsive {
+    margin-bottom: 30px;
+  }
+
+  //pagination-custom
+  .pagination-custom {
+    padding: 0;
+  }
+}
+
+
+//pyment-details
+.pyment-details {
+  margin-bottom: 30px;
+
+  @include mq(max, 767) {
+    margin-bottom: 15px;
+  }
+
+
+  //form-group
+  .form-group {
+    label {
+      font-size: 14px;
+      @include montserrat(medium500);
+      cursor: pointer;
+
+      img {
+        display: inline-block;
+        margin-right: 10px;
+      }
+
+    }
+
+    input {
+      @include border-radius(0);
+      outline: none;
+      border: 1px solid $border;
+      padding: 5px 8px;
+
+      &[type=radio] {
+        cursor: pointer;
+      }
+
+
+      &.input-52w {
+        width: 52px;
+        height: 24px;
+        display: block;
+      }
+    }
+
+    p {
+      text-align: right;
+      margin-bottom: 15px;
+    }
+
+    a {
+      font-size: 14px;
+      float: right;
+      text-decoration: dotted;
+      border-bottom: 1px dashed;
+    }
+
+    //expiration-label
+    .expiration-label {
+      font-size: 12px;
+    }
+
+  }
+}
+
+
+//evaluations
+.evaluations {
+  display: inline-block;
+  float: left;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.gray-star {
+  color: #d2d2d2 !important;
+}
+
+//mb-30
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+//_monnaie.scss
+.product-description {
+  .media-body {
+    h5 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+//testimonials
+.testimonials {
+  .media-body {
+    p {
+      width: 100%;
+    }
+
+    //body-rating
+    .body-rating {
+      p {
+        &:first-child {
+          display: inline-block;
+          margin-right: 10px;
+          float: left;
+          width: auto;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

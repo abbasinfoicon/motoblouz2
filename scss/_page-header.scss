@@ -1,0 +1,109 @@
+//panier-bg
+.panier-bg {
+  background-image: url(../img/header-bg.png);
+  background-size: contain;
+  background-color: transparent;
+  height: 223px;
+  background-repeat: no-repeat;
+  background-position: top;
+
+  @include mq(min, 1500) {
+    background-size: cover;
+    height: 230px;
+  }
+
+  @include mq(max, 991) {
+    background: $yellow;
+    height: auto;
+  }
+
+  //top-head
+  .top-head {
+    background-image: none;
+    padding: 19px 0 20px;
+
+    @include mq(max, 991) {
+      background: $black;
+    }
+
+    //logo-head
+    .logo-head {
+      img {
+        //width: 155px;
+        margin-bottom: 0;
+      }
+
+      p {
+        display: none;
+      }
+    }
+  }
+
+  .navbar-nav.main-menu li {
+    //vendre-btn
+    &.vendre-btn {
+      position: relative;
+      top: 6px;
+
+      a {
+        border: 1px solid $border;
+        color: $yellow;
+        padding: 8px 21px;
+
+        &:hover {
+          color: $white;
+        }
+
+        @include mq(max, 991){
+          border: 1px solid #5c4100;
+          color: #5c4100;
+        }
+      }
+    }
+
+    a.incSize {
+      color: $white;
+
+      @include mq(max, 767) {
+        color: $black;
+      }
+    }
+
+    &.open {
+      a.incSize {
+        color: $black;
+
+        &:hover, &:focus {
+          background: $white;
+          color: $black;
+        }
+      }
+    }
+  }
+
+  .menu-section {
+    @include mq(min, 1500) {
+      top: 7px;
+    }
+
+
+    .navbar-right {
+      //display: none;
+      position: absolute;
+      top: 44px;
+      right: 0;
+
+      @include mq(max, 884){
+        top: 94px;
+      }
+    }
+  }
+
+  //wrap-search
+  .wrap-search {
+    label{
+      color: $white;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.ui-widget-header{
+  border: 1px solid $yellow;
+  background: $yellow;
+}
+
+.ui-widget-content{
+  border: 1px solid $yellow;
+  background: $white;
+  z-index: 999!important;
+}
+
+
+.ui-state-default, .ui-widget-content .ui-state-default{
+  background: $yellow;
+  border-color: $yellow;
+  color: $white;
+  @include roboto(regular400);
+  text-align: center;
+
+  &:hover{
+    background: #c58c01;
+  }
+}
+.ui-state-default.ui-state-highlight{
+  background: $white;
+  color: $yellow;
+
+  &:hover{
+    color: $white;
+  }
+}
+
+.ui-datepicker .ui-datepicker-title{
+  color: $white;
+  @include roboto(regular400);
+}
+
+.ui-datepicker th{
+  @include roboto(regular400);
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{
+  background: #5c4100;
+}
+
+.ui-datepicker .ui-datepicker-prev span{
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 15px solid $yellow;
+  border-bottom: 8px solid transparent;
+}
+
+.ui-datepicker .ui-datepicker-next span{
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 15px solid $yellow;
+  border-bottom: 8px solid transparent;
+}
+
+
+#datepicker::-webkit-inner-spin-button,
+#datepicker::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}

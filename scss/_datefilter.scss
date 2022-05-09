@@ -1,0 +1,140 @@
+//daterangepicker
+.daterangepicker {
+  right: 160px !important;
+  width: 773px !important;
+  @include border-radius(0);
+  background: #bababa;
+
+  &:before, &:after {
+    content: none;
+  }
+
+  //calendar-table
+  .calendar-table {
+    @include border-radius(0);
+  }
+
+  //drp-calendar
+  .drp-calendar {
+    min-width: 385px;
+
+    //calendar-table
+    .calendar-table {
+      padding-right: 0;
+
+      //table
+      table {
+        thead {
+          tr {
+            &:first-child {
+              background: #ebe8e0;
+            }
+
+            &:nth-child(2) {
+              display: none;
+            }
+
+            th {
+              @include arial(bold700);
+              font-size: 16px;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+            }
+          }
+        }
+
+        //tbody
+        tbody {
+          tr {
+            td {
+              height: 51px;
+
+              &.active {
+                background: $yellow;
+                border-radius: 100%;
+                color: $white;
+              }
+
+              &:hover {
+                border-radius: 100%;
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.left {
+      padding: 63px 5px 8px 22px;
+
+      .calendar-table {
+        padding-right: 0;
+      }
+    }
+
+    &.right {
+      padding: 63px 22px 22px 5px;
+    }
+  }
+
+  //drp-buttons
+  .drp-buttons {
+    text-align: center;
+    border: none;
+    padding: 15px 15px 30px;
+
+    //drp-selected
+    .drp-selected {
+      display: none;
+    }
+
+    //btn
+    .btn {
+      font-size: 15px;
+      color: $white;
+      padding: 7px 33px;
+      background: $yellow;
+      text-transform: uppercase;
+      @include border-radius(0);
+      @include montserrat(medium500);
+      border: 1px solid $yellow;
+      height: 40px;
+      line-height: 1.6;
+
+      &.cancelBtn {
+        background: $lblk-button;
+        border-color: $lblk-button;
+      }
+
+
+      @include mq(max, 570) {
+        width: 100%;
+        margin: 0 auto 15px;
+      }
+
+      @include mq(max, 383) {
+        font-size: 12px;
+        padding: 10px;
+        height: 41px;
+      }
+
+      &:hover {
+        background: $lblk-button;
+        border-color: $lblk-button;
+        color: $white;
+      }
+
+      &:focus, &:active {
+        outline: none !important;
+        box-shadow: none;
+        border: none;
+        color: $white
+      }
+    }
+  }
+
+
+}
+
+
